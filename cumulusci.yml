@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.84.3'
+project:
+    name: TestSDB4S Falcon
+    package:
+        name: TestSDB4S Falcon
+        api_version: '59.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/TestSDB4S Falcon/tests
+            options:
+                outputdir: robot/TestSDB4S Falcon/results
+
+    robot_testdoc:
+        options:
+            path: robot/TestSDB4S Falcon/tests
+            output: robot/TestSDB4S Falcon/doc/TestSDB4S Falcon_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
